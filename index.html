@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <title>Sai Kumar | Business Consulting & Digital Services</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Business consulting, digital marketing and website development services by Sai Kumar in India">
 
 <style>
 html{scroll-behavior:smooth;}
@@ -14,13 +15,16 @@ body{
   color:white;
 }
 
-/* Header */
+/* HEADER */
 header{
   background:#16325c;
   padding:15px 20px;
   display:flex;
   justify-content:space-between;
   align-items:center;
+  position:sticky;
+  top:0;
+  z-index:1000;
 }
 .header-left{
   display:flex;
@@ -32,13 +36,17 @@ nav a{
   color:white;
   margin:0 10px;
   text-decoration:none;
+  font-weight:bold;
 }
 
-/* Hero */
-.hero{text-align:center;padding:80px 20px;}
-.hero h1{font-size:42px;}
-.hero p{font-size:18px;}
-
+/* HERO */
+.hero{
+  text-align:center;
+  padding:100px 20px;
+  background:linear-gradient(135deg,#1e3c72,#2a5298);
+}
+.hero h1{font-size:44px;margin-bottom:15px;}
+.hero p{font-size:18px;line-height:1.6;}
 .btn{
   background:white;
   color:#1e3c72;
@@ -46,12 +54,18 @@ nav a{
   border-radius:25px;
   text-decoration:none;
   font-weight:bold;
+  display:inline-block;
+  margin:10px;
 }
 
-/* Sections */
-section{text-align:center;padding:50px 20px;}
+/* SECTIONS */
+section{
+  padding:60px 20px;
+  text-align:center;
+}
+section h2{margin-bottom:15px;}
 
-/* Services */
+/* SERVICES */
 .services-grid{
   display:flex;
   gap:20px;
@@ -62,21 +76,21 @@ section{text-align:center;padding:50px 20px;}
   background:white;
   color:#1e3c72;
   padding:20px;
-  border-radius:10px;
-  width:220px;
+  border-radius:12px;
+  width:240px;
 }
 .service-box img{
   width:100%;
   border-radius:10px;
 }
 
-/* Form */
+/* FORM */
 form{max-width:400px;margin:auto;}
 input,textarea,button{
   width:100%;
   padding:10px;
   margin:8px 0;
-  border-radius:5px;
+  border-radius:6px;
   border:none;
 }
 button{
@@ -86,32 +100,32 @@ button{
   cursor:pointer;
 }
 
-/* Footer */
+/* FOOTER */
 footer{
   background:#16325c;
-  padding:25px;
+  padding:30px 20px;
   text-align:center;
 }
 
-/* Social Icons */
+/* SOCIAL ICONS */
 .socials{
-  margin-top:15px;
   display:flex;
   justify-content:center;
   gap:18px;
+  margin-top:15px;
 }
 .socials img{
   height:28px;
   background:white;
   padding:4px;
   border-radius:6px;
-  transition:transform .2s ease;
+  transition:transform 0.2s;
 }
-.socials a:hover img{
+.socials img:hover{
   transform:scale(1.15);
 }
 
-/* WhatsApp */
+/* WHATSAPP */
 .whatsapp{
   position:fixed;
   bottom:20px;
@@ -119,7 +133,6 @@ footer{
   background:#25D366;
   padding:14px 18px;
   border-radius:50px;
-  z-index:9999;
 }
 .whatsapp img{height:28px;}
 </style>
@@ -127,12 +140,14 @@ footer{
 
 <body>
 
+<!-- HEADER -->
 <header>
   <div class="header-left">
     <img src="logo.png" alt="Sai Kumar Logo" class="logo">
     <h2>Sai Kumar</h2>
   </div>
   <nav>
+    <a href="#about">About</a>
     <a href="#services">Services</a>
     <a href="#contact">Contact</a>
     <a href="#terms">Terms</a>
@@ -140,12 +155,27 @@ footer{
   </nav>
 </header>
 
+<!-- HERO -->
 <div class="hero">
-  <h1>Sai Kumar</h1>
-  <p>Business Consulting & Digital Services</p>
+  <h1>Helping Businesses Grow Digitally 🚀</h1>
+  <p>Business Consulting • Digital Marketing • Website Development</p>
   <a class="btn" href="mailto:saipulugujja143@gmail.com">Email Us</a>
+  <a class="btn" style="background:#25D366;color:white"
+     href="https://wa.me/919110321753?text=Hi%20I%20need%20your%20services" target="_blank">
+     WhatsApp
+  </a>
 </div>
 
+<!-- ABOUT -->
+<section id="about">
+  <h2>About Us</h2>
+  <p style="max-width:800px;margin:auto;line-height:1.8;">
+    I’m <strong>Sai Kumar</strong>, a business consultant helping startups and companies
+    build strong digital presence and grow faster using smart strategies.
+  </p>
+</section>
+
+<!-- SERVICES -->
 <section id="services">
   <h2>Our Services</h2>
   <div class="services-grid">
@@ -164,6 +194,7 @@ footer{
   </div>
 </section>
 
+<!-- CONTACT -->
 <section id="contact">
   <h2>Contact Us</h2>
   <form id="contactForm" action="https://formspree.io/f/xlgdolnp" method="POST">
@@ -174,36 +205,56 @@ footer{
   </form>
 </section>
 
+<!-- TERMS -->
 <section id="terms">
   <h2>Terms & Conditions</h2>
-  <p>Payments are non-refundable. Timelines depend on client approvals.</p>
+  <p>Payments are non-refundable. Project timelines depend on approvals.</p>
 </section>
 
+<!-- PRIVACY -->
 <section id="privacy">
   <h2>Privacy Policy</h2>
-  <p>Your information is never shared with third parties.</p>
+  <p>Your information is secure and never shared.</p>
 </section>
 
+<!-- FOOTER -->
 <footer>
   <p>© 2026 Sai Kumar. All Rights Reserved.</p>
 
   <div class="socials">
-    <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Facebook_icon.svg"></a>
-    <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"></a>
-    <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg"></a>
-    <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg"></a>
+    <a href="https://facebook.com/" target="_blank">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Facebook_icon.svg">
+    </a>
+    <a href="https://instagram.com/" target="_blank">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png">
+    </a>
+    <a href="https://youtube.com/" target="_blank">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg">
+    </a>
+    <a href="https://t.me/" target="_blank">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg">
+    </a>
   </div>
 </footer>
 
+<!-- WHATSAPP -->
 <a class="whatsapp" href="https://wa.me/919110321753" target="_blank">
   <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg">
 </a>
 
+<!-- FORM SCRIPT -->
 <script>
-document.getElementById("contactForm").addEventListener("submit",function(e){
+document.getElementById("contactForm").addEventListener("submit", function(e){
   e.preventDefault();
-  fetch(this.action,{method:"POST",body:new FormData(this),headers:{Accept:"application/json"}})
-  .then(()=>window.location.href="thankyou.html");
+  fetch(this.action,{
+    method:"POST",
+    body:new FormData(this),
+    headers:{Accept:"application/json"}
+  }).then(()=>{
+    window.location.href="thankyou.html";
+  }).catch(()=>{
+    alert("Error submitting form");
+  });
 });
 </script>
 
