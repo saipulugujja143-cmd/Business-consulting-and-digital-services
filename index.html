@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <title>Sai Kumar | Business Consulting & Digital Services</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Business consulting, digital marketing and website development services by Sai Kumar in India">
+<meta name="description" content="Business consulting, cargo, logistics, digital marketing and website development services by Sai Kumar in India">
 
 <style>
 html{scroll-behavior:smooth;}
@@ -68,20 +68,30 @@ section h2{margin-bottom:15px;}
 /* SERVICES */
 .services-grid{
   display:flex;
-  gap:20px;
+  gap:25px;
   justify-content:center;
   flex-wrap:wrap;
+  margin-top:30px;
 }
 .service-box{
   background:white;
   color:#1e3c72;
   padding:20px;
   border-radius:12px;
-  width:240px;
+  width:260px;
 }
 .service-box img{
   width:100%;
+  height:160px;
+  object-fit:cover;
   border-radius:10px;
+}
+.service-box h3{
+  margin-top:15px;
+}
+.service-box p{
+  font-size:14px;
+  line-height:1.6;
 }
 
 /* FORM */
@@ -158,7 +168,7 @@ footer{
 <!-- HERO -->
 <div class="hero">
   <h1>Helping Businesses Grow Digitally 🚀</h1>
-  <p>Business Consulting • Digital Marketing • Website Development</p>
+  <p>Business Consulting • Cargo & Logistics • Digital Services</p>
   <a class="btn" href="mailto:saipulugujja143@gmail.com">Email Us</a>
   <a class="btn" style="background:#25D366;color:white"
      href="https://wa.me/919110321753?text=Hi%20I%20need%20your%20services" target="_blank">
@@ -170,27 +180,66 @@ footer{
 <section id="about">
   <h2>About Us</h2>
   <p style="max-width:800px;margin:auto;line-height:1.8;">
-    I’m <strong>Sai Kumar</strong>, a business consultant helping startups and companies
-    build strong digital presence and grow faster using smart strategies.
+    I’m <strong>Sai Kumar</strong>, a business consultant and digital service provider
+    helping companies in logistics, goods supply, and services grow using modern digital solutions.
   </p>
 </section>
 
-<!-- SERVICES -->
+<!-- ✅ UPDATED SERVICES SECTION -->
 <section id="services">
   <h2>Our Services</h2>
+  <p style="max-width:800px;margin:auto;line-height:1.7;">
+    We provide consulting and digital solutions for cargo, logistics,
+    goods suppliers, and service-based businesses.
+  </p>
+
   <div class="services-grid">
+
     <div class="service-box">
-      <img src="https://via.placeholder.com/300x180">
+      <img src="https://images.unsplash.com/photo-1605745341112-85968b19335b" alt="Cargo & Logistics">
+      <h3>Cargo & Logistics</h3>
+      <p>
+        Consulting and digital support for cargo,
+        transportation, and logistics operations.
+      </p>
+    </div>
+
+    <div class="service-box">
+      <img src="https://images.unsplash.com/photo-1581091870627-3f9c7c3f1f65" alt="Goods Supply">
+      <h3>Goods & Supply Chain</h3>
+      <p>
+        Helping goods suppliers and traders streamline
+        operations and reach more clients online.
+      </p>
+    </div>
+
+    <div class="service-box">
+      <img src="https://images.unsplash.com/photo-1556761175-4b46a572b786" alt="Business Consulting">
       <h3>Business Consulting</h3>
+      <p>
+        Strategic planning, operations improvement,
+        and growth consulting for businesses.
+      </p>
     </div>
+
     <div class="service-box">
-      <img src="https://via.placeholder.com/300x180">
+      <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0" alt="Digital Marketing">
       <h3>Digital Marketing</h3>
+      <p>
+        SEO, social media marketing, and lead generation
+        to grow your brand online.
+      </p>
     </div>
+
     <div class="service-box">
-      <img src="https://via.placeholder.com/300x180">
+      <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d" alt="Website Development">
       <h3>Website Development</h3>
+      <p>
+        Fast, modern, and mobile-friendly websites
+        built for real business results.
+      </p>
     </div>
+
   </div>
 </section>
 
@@ -208,13 +257,13 @@ footer{
 <!-- TERMS -->
 <section id="terms">
   <h2>Terms & Conditions</h2>
-  <p>Payments are non-refundable. Project timelines depend on approvals.</p>
+  <p>Payments are non-refundable. Project timelines depend on client approvals.</p>
 </section>
 
 <!-- PRIVACY -->
 <section id="privacy">
   <h2>Privacy Policy</h2>
-  <p>Your information is secure and never shared.</p>
+  <p>Your personal information is secure and never shared.</p>
 </section>
 
 <!-- FOOTER -->
@@ -242,7 +291,6 @@ footer{
   <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg">
 </a>
 
-<!-- FORM SCRIPT -->
 <script>
 document.getElementById("contactForm").addEventListener("submit", function(e){
   e.preventDefault();
