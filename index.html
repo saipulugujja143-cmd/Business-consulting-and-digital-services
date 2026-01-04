@@ -156,6 +156,25 @@ footer{
 </a>
 
 </body>
+  <script>
+document.getElementById("contactForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  fetch(this.action, {
+    method: "POST",
+    body: new FormData(this),
+    headers: { 'Accept': 'application/json' }
+  }).then(() => {
+    document.getElementById("contact").style.display = "none";
+    document.getElementById("thankyou").style.display = "block";
+    window.location.hash = "thankyou";
+  }).catch(() => {
+    alert("Something went wrong. Please try again.");
+  });
+});
+</script>
+
 </html>
+
 
 
