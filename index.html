@@ -11,12 +11,7 @@
 <meta name="author" content="Sai Kumar">
 <meta name="robots" content="index, follow">
 
-<!-- SEO Open Graph -->
-<meta property="og:title" content="Sai Kumar | Business Consulting & Digital Services">
-<meta property="og:description" content="Professional business consulting, cargo & logistics solutions.">
-<meta property="og:type" content="website">
-
-<!-- GOOGLE ANALYTICS (ADD YOUR ID) -->
+<!-- GOOGLE ANALYTICS (add your ID if needed) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
 <script>
 window.dataLayer = window.dataLayer || [];
@@ -63,11 +58,12 @@ h2{margin-bottom:20px}
   padding:20px;
   border-radius:12px;
 }
-.card img{width:100%;height:160px;object-fit:cover;border-radius:10px}
-
-/* STATS */
-.stats{background:#16325c}
-.stat{font-size:32px;font-weight:bold}
+.card img{
+  width:100%;
+  height:160px;
+  object-fit:cover;
+  border-radius:10px
+}
 
 /* FAQ */
 .faq{max-width:700px;margin:auto;text-align:left}
@@ -75,10 +71,14 @@ h2{margin-bottom:20px}
 .faq-question{padding:15px;font-weight:bold;cursor:pointer}
 .faq-answer{padding:15px;display:none}
 
-/* FORMS */
+/* FORM */
 form{max-width:420px;margin:auto}
 input,textarea,button{
-  width:100%;padding:10px;margin:8px 0;border-radius:6px;border:none
+  width:100%;
+  padding:10px;
+  margin:8px 0;
+  border-radius:6px;
+  border:none
 }
 button{background:white;font-weight:bold;cursor:pointer}
 
@@ -90,21 +90,34 @@ button{background:white;font-weight:bold;cursor:pointer}
   border-radius:10px;
   max-width:400px;
   margin:auto;
-  display:none;
+  display:none
 }
 
 /* FOOTER */
 footer{background:#16325c;padding:30px}
-.socials{display:flex;justify-content:center;gap:18px;margin-top:15px}
-.socials img{height:26px;background:white;padding:4px;border-radius:5px}
+.socials{
+  display:flex;
+  justify-content:center;
+  gap:18px;
+  margin-top:15px
+}
+.socials img{
+  height:26px;
+  background:white;
+  padding:4px;
+  border-radius:5px
+}
 
-/* FLOATING */
-.whatsapp,.call,.top-btn{
-  position:fixed;right:20px;padding:12px;border-radius:50%
+/* FLOATING BUTTONS */
+.whatsapp,.call{
+  position:fixed;
+  right:20px;
+  padding:12px;
+  border-radius:50%;
+  z-index:999
 }
 .whatsapp{bottom:20px;background:#25D366}
 .call{bottom:80px;background:#0a66c2}
-.top-btn{bottom:140px;background:white;color:#1e3c72;display:none}
 
 /* MOBILE */
 @media(max-width:768px){
@@ -113,8 +126,10 @@ footer{background:#16325c;padding:30px}
     flex-direction:column;
     position:absolute;
     background:#16325c;
-    top:60px;right:20px;
-    padding:15px;border-radius:10px
+    top:60px;
+    right:20px;
+    padding:15px;
+    border-radius:10px
   }
   nav.show{display:flex}
   .menu-btn{display:block}
@@ -126,7 +141,7 @@ footer{background:#16325c;padding:30px}
 
 <header>
   <div class="header-left">
-    <img src="logo.png" class="logo">
+    <img src="logo.png" class="logo" alt="Sai Kumar Logo">
     <h3>Sai Kumar</h3>
   </div>
   <div class="menu-btn" onclick="toggleMenu()">☰</div>
@@ -165,13 +180,13 @@ footer{background:#16325c;padding:30px}
 <!-- PAYMENT -->
 <section id="payment">
 <h2>Make a Payment</h2>
-<p>Secure online payment powered by Razorpay (backend required)</p>
+<p>Secure online payment (backend required)</p>
 <button onclick="alert('Connect Razorpay backend to activate payments')">
 Pay Now
 </button>
 </section>
 
-<!-- ADMIN LOGIN -->
+<!-- ADMIN -->
 <section id="admin">
 <h2>Admin Login</h2>
 <form onsubmit="adminLogin(event)">
@@ -193,11 +208,11 @@ Pay Now
 <div class="faq">
   <div class="faq-item">
     <div class="faq-question">Is payment secure?</div>
-    <div class="faq-answer">Yes, Razorpay / Stripe integration is supported.</div>
+    <div class="faq-answer">Yes, Razorpay / Stripe integration supported.</div>
   </div>
   <div class="faq-item">
-    <div class="faq-question">Do you offer cargo consulting?</div>
-    <div class="faq-answer">Yes, complete logistics solutions.</div>
+    <div class="faq-question">Do you provide cargo services?</div>
+    <div class="faq-answer">Yes, complete cargo & logistics consulting.</div>
   </div>
 </div>
 </section>
@@ -214,7 +229,7 @@ Pay Now
 </section>
 
 <footer>
-<p>© 2026 Sai Kumar</p>
+<p>© 2026 Sai Kumar. All Rights Reserved.</p>
 <div class="socials">
   <img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Facebook_icon.svg">
   <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png">
@@ -223,14 +238,14 @@ Pay Now
 </div>
 </footer>
 
-<!-- FLOATING -->
+<!-- FLOATING CTA -->
 <a class="whatsapp" href="https://wa.me/919110321753" target="_blank">
 <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" height="28">
 </a>
+
 <a class="call" href="tel:+919110321753">
 <img src="https://upload.wikimedia.org/wikipedia/commons/8/8c/Phone_font_awesome.svg" height="28">
 </a>
-<button class="top-btn" onclick="scrollTo({top:0,behavior:'smooth'})">↑</button>
 
 <script>
 /* MENU */
@@ -253,8 +268,10 @@ setInterval(()=>{
 
 /* FAQ */
 document.querySelectorAll(".faq-question").forEach(q=>{
- q.onclick=()=>q.nextElementSibling.style.display=
- q.nextElementSibling.style.display==="block"?"none":"block";
+ q.onclick=()=>{
+   q.nextElementSibling.style.display =
+   q.nextElementSibling.style.display==="block"?"none":"block";
+ }
 });
 
 /* ADMIN */
@@ -266,12 +283,6 @@ function adminLogin(e){
    alert("Wrong password");
  }
 }
-
-/* BACK TO TOP */
-window.onscroll=()=>{
- document.querySelector(".top-btn").style.display=
- window.scrollY>400?"block":"none";
-};
 </script>
 
 </body>
