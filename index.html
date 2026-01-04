@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-
 <title>Sai Kumar | Business Consulting, Cargo & Digital Services</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,15 +9,6 @@
 <meta name="keywords" content="Business Consulting, Cargo Services, Logistics, Digital Marketing, Website Development">
 <meta name="author" content="Sai Kumar">
 <meta name="robots" content="index, follow">
-
-<!-- GOOGLE ANALYTICS (add your ID if needed) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'G-XXXXXXX');
-</script>
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
@@ -38,9 +28,21 @@ header{
 }
 .header-left{display:flex;gap:10px;align-items:center}
 .logo{height:40px}
-nav{display:flex;gap:15px}
+nav{display:flex;gap:15px;align-items:center}
 nav a{color:white;text-decoration:none;font-weight:bold}
 .menu-btn{display:none;font-size:26px;cursor:pointer}
+
+/* SEARCH */
+.search-box{
+  position:relative;
+}
+.search-box input{
+  padding:6px 10px;
+  border-radius:20px;
+  border:none;
+  display:none;
+}
+.search-box.show input{display:inline-block}
 
 /* SLIDER */
 .slider img{width:100%;height:420px;object-fit:cover}
@@ -81,17 +83,6 @@ input,textarea,button{
   border:none
 }
 button{background:white;font-weight:bold;cursor:pointer}
-
-/* ADMIN */
-.admin{
-  background:#ffffff;
-  color:#1e3c72;
-  padding:20px;
-  border-radius:10px;
-  max-width:400px;
-  margin:auto;
-  display:none
-}
 
 /* FOOTER */
 footer{background:#16325c;padding:30px}
@@ -144,12 +135,19 @@ footer{background:#16325c;padding:30px}
     <img src="logo.png" class="logo" alt="Sai Kumar Logo">
     <h3>Sai Kumar</h3>
   </div>
+
   <div class="menu-btn" onclick="toggleMenu()">☰</div>
+
   <nav id="menu">
     <a href="#services">Services</a>
     <a href="#payment">Payment</a>
-    <a href="#admin">Admin</a>
     <a href="#contact">Contact</a>
+
+    <!-- SEARCH -->
+    <div class="search-box" id="searchBox">
+      <input type="text" id="searchInput" placeholder="Search..." onkeyup="liveSearch()">
+      <span style="cursor:pointer" onclick="toggleSearch()">🔍</span>
+    </div>
   </nav>
 </header>
 
@@ -161,16 +159,16 @@ footer{background:#16325c;padding:30px}
 <!-- SERVICES -->
 <section id="services">
 <h2>Our Services</h2>
-<div class="grid">
-  <div class="card">
+<div class="grid search-item">
+  <div class="card search-item">
     <img src="https://images.unsplash.com/photo-1605745341112-85968b19335b">
     <h3>Cargo & Logistics</h3>
   </div>
-  <div class="card">
+  <div class="card search-item">
     <img src="https://images.unsplash.com/photo-1556761175-4b46a572b786">
     <h3>Business Consulting</h3>
   </div>
-  <div class="card">
+  <div class="card search-item">
     <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0">
     <h3>Digital Marketing</h3>
   </div>
@@ -178,7 +176,7 @@ footer{background:#16325c;padding:30px}
 </section>
 
 <!-- PAYMENT -->
-<section id="payment">
+<section id="payment" class="search-item">
 <h2>Make a Payment</h2>
 <p>Secure online payment (backend required)</p>
 <button onclick="alert('Connect Razorpay backend to activate payments')">
@@ -186,39 +184,23 @@ Pay Now
 </button>
 </section>
 
-<!-- ADMIN -->
-<section id="admin">
-<h2>Admin Login</h2>
-<form onsubmit="adminLogin(event)">
-  <input type="password" id="adminPass" placeholder="Admin Password">
-  <button>Login</button>
-</form>
-
-<div class="admin" id="adminPanel">
-  <h3>Admin Dashboard</h3>
-  <p>✔ View messages</p>
-  <p>✔ Manage services</p>
-  <p>✔ Analytics access</p>
-</div>
-</section>
-
 <!-- FAQ -->
-<section>
+<section class="search-item">
 <h2>FAQ</h2>
 <div class="faq">
-  <div class="faq-item">
+  <div class="faq-item search-item">
     <div class="faq-question">Is payment secure?</div>
-    <div class="faq-answer">Yes, Razorpay / Stripe integration supported.</div>
+    <div class="faq-answer">Yes, Razorpay / Stripe supported.</div>
   </div>
-  <div class="faq-item">
+  <div class="faq-item search-item">
     <div class="faq-question">Do you provide cargo services?</div>
-    <div class="faq-answer">Yes, complete cargo & logistics consulting.</div>
+    <div class="faq-answer">Yes, cargo & logistics consulting.</div>
   </div>
 </div>
 </section>
 
 <!-- CONTACT -->
-<section id="contact">
+<section id="contact" class="search-item">
 <h2>Contact Us</h2>
 <form action="https://formspree.io/f/xlgdolnp" method="POST">
   <input name="name" placeholder="Name" required>
@@ -228,7 +210,7 @@ Pay Now
 </form>
 </section>
 
-<footer>
+<footer class="search-item">
 <p>© 2026 Sai Kumar. All Rights Reserved.</p>
 <div class="socials">
   <img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Facebook_icon.svg">
@@ -253,6 +235,21 @@ function toggleMenu(){
  document.getElementById("menu").classList.toggle("show");
 }
 
+/* SEARCH TOGGLE */
+function toggleSearch(){
+ document.getElementById("searchBox").classList.toggle("show");
+ document.getElementById("searchInput").focus();
+}
+
+/* LIVE SEARCH */
+function liveSearch(){
+ let input=document.getElementById("searchInput").value.toLowerCase();
+ document.querySelectorAll(".search-item").forEach(item=>{
+   item.style.display=item.innerText.toLowerCase().includes(input)
+   ?"":"none";
+ });
+}
+
 /* SLIDER */
 const slides=[
  "https://images.unsplash.com/photo-1605745341112-85968b19335b",
@@ -266,23 +263,13 @@ setInterval(()=>{
  document.getElementById("slide").src=slides[i];
 },3000);
 
-/* FAQ */
+/* FAQ TOGGLE */
 document.querySelectorAll(".faq-question").forEach(q=>{
  q.onclick=()=>{
    q.nextElementSibling.style.display =
    q.nextElementSibling.style.display==="block"?"none":"block";
  }
 });
-
-/* ADMIN */
-function adminLogin(e){
- e.preventDefault();
- if(document.getElementById("adminPass").value==="admin123"){
-   document.getElementById("adminPanel").style.display="block";
- }else{
-   alert("Wrong password");
- }
-}
 </script>
 
 </body>
