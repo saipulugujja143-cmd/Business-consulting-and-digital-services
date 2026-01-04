@@ -2,68 +2,57 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Sai Kumar | Business Consulting & Digital Services</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sai Kumar | Business Consulting & Digital Services</title>
 
 <!-- SEO -->
-<meta name="description" content="Business Consulting, Digital Marketing, Web Development & Logistics Services">
-<meta name="keywords" content="Business Consulting, Digital Services, Marketing, Website Development, Cargo Services">
+<meta name="description" content="Business Consulting, Digital Marketing, Website Development, Cargo & Logistics Services">
+<meta name="keywords" content="Business Consulting, Digital Services, Cargo, Logistics, Marketing">
 <meta name="author" content="Sai Kumar">
 
 <style>
 html{scroll-behavior:smooth}
 body{margin:0;font-family:Arial;background:#1e3c72;color:white}
 
-/* HEADER */
 header{background:#16325c;padding:15px 20px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:999}
 .logo{height:40px}
 nav a{color:white;margin:0 10px;text-decoration:none;font-weight:bold}
 
-/* HERO */
 .hero{text-align:center;padding:80px 20px}
 .hero h1{font-size:42px}
+.btn{background:white;color:#1e3c72;padding:12px 25px;border-radius:25px;text-decoration:none;font-weight:bold;border:none;cursor:pointer}
 
-/* BUTTON */
-.btn{background:white;color:#1e3c72;padding:12px 25px;border-radius:25px;text-decoration:none;font-weight:bold}
+section{text-align:center;padding:60px 20px}
 
-/* SECTIONS */
-section{padding:60px 20px;text-align:center}
-
-/* SERVICES */
 .services{display:flex;gap:20px;justify-content:center;flex-wrap:wrap}
 .card{background:white;color:#1e3c72;padding:20px;border-radius:10px;width:230px}
 .card img{width:100%;border-radius:10px}
 
-/* COUNTER */
 .stats{display:flex;justify-content:center;gap:30px}
-.stat h2{font-size:40px}
+.stat h2{font-size:38px}
 
-/* FAQ */
 .faq{max-width:600px;margin:auto;text-align:left}
 .faq details{background:#16325c;padding:15px;margin:10px 0;border-radius:8px}
 
-/* AUTH */
 .auth{max-width:350px;margin:auto;background:white;color:#1e3c72;padding:25px;border-radius:10px}
-.auth input,button{width:100%;padding:10px;margin:8px 0}
+.auth input{width:100%;padding:10px;margin:8px 0}
 
-/* FOOTER */
 footer{background:#16325c;padding:25px}
-
-/* SOCIAL */
 .social img{height:26px;margin:0 10px;filter:invert(1)}
 
-/* FLOAT BUTTONS */
 .whatsapp,.call{position:fixed;right:20px;padding:14px;border-radius:50px;z-index:999}
 .whatsapp{bottom:20px;background:#25D366}
 .call{bottom:80px;background:#0d6efd}
 .whatsapp img,.call img{height:26px}
+
+.search-box{max-width:400px;margin:20px auto}
+.search-box input{width:100%;padding:10px;border-radius:8px;border:none}
 </style>
 </head>
-
 <body>
 
 <header>
-<img src="logo.png" class="logo">
+<img src="logo.png" class="logo" alt="Logo">
 <nav>
 <a href="#services">Services</a>
 <a href="#portfolio">Portfolio</a>
@@ -78,9 +67,13 @@ footer{background:#16325c;padding:25px}
 <a class="btn" href="#contact">Get Started</a>
 </div>
 
+<div class="search-box">
+<input type="text" id="search" placeholder="Search services..." onkeyup="searchService()">
+</div>
+
 <section id="services">
 <h2>Our Services</h2>
-<div class="services">
+<div class="services" id="serviceList">
 <div class="card"><img src="https://via.placeholder.com/300x180"><h3>Business Consulting</h3></div>
 <div class="card"><img src="https://via.placeholder.com/300x180"><h3>Digital Marketing</h3></div>
 <div class="card"><img src="https://via.placeholder.com/300x180"><h3>Website Development</h3></div>
@@ -98,30 +91,30 @@ footer{background:#16325c;padding:25px}
 </section>
 
 <section id="portfolio">
-<h2>Portfolio / Case Studies</h2>
-<p>Successfully delivered business & digital solutions globally.</p>
+<h2>Portfolio</h2>
+<p>Real-world consulting, marketing & logistics projects.</p>
 </section>
 
 <section>
 <h2>Testimonials</h2>
-<p>⭐ ⭐ ⭐ ⭐ ⭐ Trusted by professionals worldwide</p>
+<p>⭐ ⭐ ⭐ ⭐ ⭐ Trusted by 100+ clients</p>
 </section>
 
 <section>
 <h2>FAQ</h2>
 <div class="faq">
-<details><summary>Do you provide support?</summary><p>Yes, 24/7 support.</p></details>
-<details><summary>Is payment refundable?</summary><p>No refunds once work starts.</p></details>
+<details><summary>Do you provide support?</summary><p>Yes, full-time support.</p></details>
+<details><summary>Is payment refundable?</summary><p>No refunds after work starts.</p></details>
 </div>
 </section>
 
 <section id="login">
 <h2>Login / Register</h2>
-<div class="auth" id="authBox">
+<div class="auth">
 <input id="user" placeholder="Username">
 <input id="pass" type="password" placeholder="Password">
-<button onclick="login()">Login</button>
-<button onclick="register()">Register</button>
+<button class="btn" onclick="login()">Login</button>
+<button class="btn" onclick="register()">Register</button>
 <p id="msg"></p>
 </div>
 </section>
@@ -147,12 +140,10 @@ footer{background:#16325c;padding:25px}
 </div>
 </footer>
 
-<!-- FLOAT -->
 <a class="whatsapp" href="https://wa.me/919110321753"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"></a>
 <a class="call" href="tel:+919110321753"><img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Phone_icon.svg"></a>
 
 <script>
-/* COUNTER */
 let c1=0,c2=0,c3=0;
 let i=setInterval(()=>{
 if(c1<120){c1++;c2+=2;c3+=1}
@@ -162,18 +153,24 @@ document.getElementById("c3").innerText=c3;
 if(c1>=120)clearInterval(i);
 },30);
 
-/* AUTH */
 function register(){
-localStorage.setItem("u",user.value);
-localStorage.setItem("p",pass.value);
-msg.innerText="Registered successfully";
+localStorage.setItem('u',user.value);
+localStorage.setItem('p',pass.value);
+msg.innerText='Registered successfully';
 }
 function login(){
-if(user.value===localStorage.getItem("u") && pass.value===localStorage.getItem("p")){
-msg.innerText="Login successful";
-}else msg.innerText="Invalid login";
+if(user.value===localStorage.getItem('u') && pass.value===localStorage.getItem('p')){
+msg.innerText='Login successful';
+}else msg.innerText='Invalid login';
+}
+
+function searchService(){
+let input=document.getElementById('search').value.toLowerCase();
+let cards=document.querySelectorAll('.card');
+cards.forEach(c=>{
+c.style.display=c.innerText.toLowerCase().includes(input)?'block':'none';
+});
 }
 </script>
-
 </body>
 </html>
