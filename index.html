@@ -27,9 +27,7 @@ header{
   align-items:center;
   gap:12px;
 }
-.logo{
-  height:45px;
-}
+.logo{height:45px;}
 nav a{
   color:white;
   margin:0 10px;
@@ -41,7 +39,6 @@ nav a{
 .hero h1{font-size:42px;}
 .hero p{font-size:18px;}
 
-/* Button */
 .btn{
   background:white;
   color:#1e3c72;
@@ -53,9 +50,8 @@ nav a{
 
 /* Sections */
 section{text-align:center;padding:50px 20px;}
-section h2{margin-bottom:15px;}
 
-/* Services Images */
+/* Services */
 .services-grid{
   display:flex;
   gap:20px;
@@ -63,7 +59,7 @@ section h2{margin-bottom:15px;}
   flex-wrap:wrap;
 }
 .service-box{
-  background:#ffffff;
+  background:white;
   color:#1e3c72;
   padding:20px;
   border-radius:10px;
@@ -93,20 +89,26 @@ button{
 /* Footer */
 footer{
   background:#16325c;
-  padding:20px;
+  padding:25px;
   text-align:center;
 }
 
 /* Social Icons */
 .socials{
-  margin-top:10px;
-}
-.socials a{
-  margin:0 10px;
-  display:inline-block;
+  margin-top:15px;
+  display:flex;
+  justify-content:center;
+  gap:18px;
 }
 .socials img{
   height:28px;
+  background:white;
+  padding:4px;
+  border-radius:6px;
+  transition:transform .2s ease;
+}
+.socials a:hover img{
+  transform:scale(1.15);
 }
 
 /* WhatsApp */
@@ -119,28 +121,8 @@ footer{
   border-radius:50px;
   z-index:9999;
 }
-.whatsapp img{
-  height:28px;
-}
+.whatsapp img{height:28px;}
 </style>
-  .socials{
-  margin-top:15px;
-  display:flex;
-  justify-content:center;
-  gap:18px;
-}
-
-.socials img{
-  height:26px;
-  filter: invert(1); /* makes icons white */
-  transition: transform 0.2s ease, opacity 0.2s ease;
-}
-
-.socials a:hover img{
-  transform: scale(1.15);
-  opacity:0.8;
-}
-
 </head>
 
 <body>
@@ -166,18 +148,17 @@ footer{
 
 <section id="services">
   <h2>Our Services</h2>
-
   <div class="services-grid">
     <div class="service-box">
-      <img src="https://via.placeholder.com/300x180" alt="Consulting">
+      <img src="https://via.placeholder.com/300x180">
       <h3>Business Consulting</h3>
     </div>
     <div class="service-box">
-      <img src="https://via.placeholder.com/300x180" alt="Marketing">
+      <img src="https://via.placeholder.com/300x180">
       <h3>Digital Marketing</h3>
     </div>
     <div class="service-box">
-      <img src="https://via.placeholder.com/300x180" alt="Web">
+      <img src="https://via.placeholder.com/300x180">
       <h3>Website Development</h3>
     </div>
   </div>
@@ -195,77 +176,36 @@ footer{
 
 <section id="terms">
   <h2>Terms & Conditions</h2>
-  <p>
-    All services provided by Sai Kumar are subject to agreement.<br>
-    Payments once made are non-refundable.<br>
-    Project timelines depend on client approvals.
-  </p>
+  <p>Payments are non-refundable. Timelines depend on client approvals.</p>
 </section>
 
 <section id="privacy">
   <h2>Privacy Policy</h2>
-  <p>
-    We respect your privacy.<br>
-    Personal information is never shared with third parties.<br>
-    Contact details are used only for communication.
-  </p>
+  <p>Your information is never shared with third parties.</p>
 </section>
 
 <footer>
   <p>© 2026 Sai Kumar. All Rights Reserved.</p>
-  <footer>
-  <p>© 2026 Sai Kumar. All Rights Reserved.</p>
 
   <div class="socials">
-    <a href="https://facebook.com/" target="_blank" aria-label="Facebook">
-      <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/facebook.svg" alt="Facebook">
-    </a>
-
-    <a href="https://instagram.com/" target="_blank" aria-label="Instagram">
-      <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/instagram.svg" alt="Instagram">
-    </a>
-
-    <a href="https://youtube.com/" target="_blank" aria-label="YouTube">
-      <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/youtube.svg" alt="YouTube">
-    </a>
-
-    <a href="https://t.me/" target="_blank" aria-label="Telegram">
-      <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/telegram.svg" alt="Telegram">
-    </a>
+    <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Facebook_icon.svg"></a>
+    <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"></a>
+    <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg"></a>
+    <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg"></a>
   </div>
 </footer>
 
-
-  <div class="socials">
-    <a href="https://instagram.com/" target="_blank">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
-    </a>
-    <a href="https://facebook.com/" target="_blank">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Facebook_icon.svg" alt="Facebook">
-    </a>
-  </div>
-</footer>
-
-<!-- WhatsApp -->
 <a class="whatsapp" href="https://wa.me/919110321753" target="_blank">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg">
 </a>
 
 <script>
-document.getElementById("contactForm").addEventListener("submit", function(e){
+document.getElementById("contactForm").addEventListener("submit",function(e){
   e.preventDefault();
-  fetch(this.action,{
-    method:"POST",
-    body:new FormData(this),
-    headers:{Accept:"application/json"}
-  }).then(()=>{
-    window.location.href="thankyou.html";
-  }).catch(()=>{
-    alert("Error submitting form");
-  });
+  fetch(this.action,{method:"POST",body:new FormData(this),headers:{Accept:"application/json"}})
+  .then(()=>window.location.href="thankyou.html");
 });
 </script>
 
 </body>
 </html>
-
