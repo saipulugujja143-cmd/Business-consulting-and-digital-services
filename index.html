@@ -2,14 +2,12 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-
 <title>Sai Kumar | Business Consulting & Digital Services</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Business Consulting, Cargo, Logistics & Digital Services by Sai Kumar">
 <meta name="keywords" content="Business Consulting, Cargo Services, Logistics, Digital Marketing">
 <meta name="author" content="Sai Kumar">
-<meta name="robots" content="index, follow">
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
@@ -29,10 +27,8 @@ header{
 }
 .header-left{display:flex;align-items:center;gap:10px}
 .logo{height:42px}
-
 nav{display:flex;gap:15px}
 nav a{color:white;text-decoration:none;font-weight:bold}
-
 .menu-btn{display:none;font-size:26px;cursor:pointer}
 
 /* SLIDER */
@@ -40,14 +36,13 @@ nav a{color:white;text-decoration:none;font-weight:bold}
   width:100%;
   height:420px;
   object-fit:cover;
-  animation:fade 1s ease;
 }
 
-/* SECTIONS */
+/* SECTION */
 section{padding:70px 20px;text-align:center}
 h2{margin-bottom:25px}
 
-/* CARDS */
+/* GRID */
 .grid{
   display:flex;
   gap:25px;
@@ -67,12 +62,40 @@ h2{margin-bottom:25px}
   object-fit:cover;
   border-radius:10px;
 }
-.card h3{margin:12px 0}
 
-/* TESTIMONIAL */
-.testimonial{font-style:italic}
+/* STATS */
+.stats{
+  background:#16325c;
+}
+.stat{
+  font-size:32px;
+  font-weight:bold;
+}
+.stat p{font-size:16px}
 
-/* CONTACT */
+/* FAQ */
+.faq{
+  max-width:700px;
+  margin:auto;
+  text-align:left;
+}
+.faq-item{
+  background:white;
+  color:#1e3c72;
+  margin-bottom:10px;
+  border-radius:8px;
+}
+.faq-question{
+  padding:15px;
+  cursor:pointer;
+  font-weight:bold;
+}
+.faq-answer{
+  padding:15px;
+  display:none;
+}
+
+/* FORM */
 form{max-width:420px;margin:auto}
 input,textarea,button{
   width:100%;
@@ -102,28 +125,20 @@ footer{
   border-radius:6px;
 }
 
-/* WHATSAPP */
-.whatsapp{
+/* FLOATING BUTTONS */
+.whatsapp,.call,.top-btn{
   position:fixed;
-  bottom:20px;
   right:20px;
-  background:#25D366;
-  padding:14px;
-  border-radius:50px;
+  padding:12px;
+  border-radius:50%;
 }
-
-/* ADMIN */
-#admin{
+.whatsapp{bottom:20px;background:#25D366}
+.call{bottom:80px;background:#0a66c2}
+.top-btn{
+  bottom:140px;
+  background:white;
+  color:#1e3c72;
   display:none;
-  background:#fff;
-  color:#000;
-  padding:40px;
-}
-
-/* ANIMATION */
-@keyframes fade{
-  from{opacity:0}
-  to{opacity:1}
 }
 
 /* MOBILE */
@@ -151,13 +166,11 @@ footer{
     <img src="logo.png" class="logo">
     <h3>Sai Kumar</h3>
   </div>
-
   <div class="menu-btn" onclick="toggleMenu()">☰</div>
-
   <nav id="menu">
     <a href="#services">Services</a>
     <a href="#portfolio">Portfolio</a>
-    <a href="#testimonials">Testimonials</a>
+    <a href="#faq">FAQ</a>
     <a href="#contact">Contact</a>
   </nav>
 </header>
@@ -174,48 +187,61 @@ footer{
   <div class="card">
     <img src="https://images.unsplash.com/photo-1605745341112-85968b19335b">
     <h3>Cargo & Logistics</h3>
-    <p>End-to-end logistics & cargo consulting.</p>
   </div>
   <div class="card">
     <img src="https://images.unsplash.com/photo-1556761175-4b46a572b786">
     <h3>Business Consulting</h3>
-    <p>Growth, strategy & operations.</p>
   </div>
   <div class="card">
     <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0">
     <h3>Digital Marketing</h3>
-    <p>SEO, Ads & online branding.</p>
   </div>
+</div>
+</section>
+
+<!-- STATS -->
+<section class="stats">
+<div class="grid">
+  <div class="stat" data-target="100">0<p>Clients</p></div>
+  <div class="stat" data-target="50">0<p>Projects</p></div>
+  <div class="stat" data-target="5">0<p>Years Experience</p></div>
 </div>
 </section>
 
 <!-- PORTFOLIO -->
 <section id="portfolio">
-<h2>Portfolio / Case Studies</h2>
+<h2>Portfolio</h2>
 <div class="grid">
-  <div class="card">
-    <h3>Logistics Website</h3>
-    <p>60% lead growth</p>
-  </div>
-  <div class="card">
-    <h3>Consulting Project</h3>
-    <p>Process optimization</p>
-  </div>
+  <div class="card">Logistics Website – 60% Growth</div>
+  <div class="card">Consulting Optimization</div>
 </div>
 </section>
 
-<!-- TESTIMONIALS -->
-<section id="testimonials">
-<h2>Testimonials</h2>
-<div class="grid">
-  <div class="card testimonial">“Very professional service”</div>
-  <div class="card testimonial">“Helped our cargo business grow”</div>
+<!-- FAQ -->
+<section id="faq">
+<h2>Frequently Asked Questions</h2>
+<div class="faq">
+  <div class="faq-item">
+    <div class="faq-question">Do you provide cargo consulting?</div>
+    <div class="faq-answer">Yes, end-to-end cargo & logistics consulting.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-question">How long does a project take?</div>
+    <div class="faq-answer">Typically 2–6 weeks depending on scope.</div>
+  </div>
 </div>
 </section>
 
 <!-- CONTACT -->
 <section id="contact">
 <h2>Contact Us</h2>
+<form>
+  <input type="email" placeholder="Your Email" required>
+  <button>Subscribe</button>
+</form>
+
+<br>
+
 <form action="https://formspree.io/f/xlgdolnp" method="POST">
   <input type="text" name="name" placeholder="Name" required>
   <input type="email" name="email" placeholder="Email" required>
@@ -224,10 +250,11 @@ footer{
 </form>
 </section>
 
-<!-- ADMIN (hidden) -->
-<section id="admin">
-<h2>Admin Dashboard</h2>
-<p>This section is hidden (client-side admin)</p>
+<!-- MAP -->
+<section>
+<h2>Our Location</h2>
+<iframe src="https://www.google.com/maps?q=India&output=embed"
+ width="100%" height="300" style="border:0"></iframe>
 </section>
 
 <footer>
@@ -240,9 +267,16 @@ footer{
 </div>
 </footer>
 
+<!-- FLOATING BUTTONS -->
 <a class="whatsapp" href="https://wa.me/919110321753" target="_blank">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" height="28">
+<img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" height="28">
 </a>
+
+<a class="call" href="tel:+919110321753">
+<img src="https://upload.wikimedia.org/wikipedia/commons/8/8c/Phone_font_awesome.svg" height="28">
+</a>
+
+<button class="top-btn" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
 
 <script>
 /* MENU */
@@ -262,6 +296,34 @@ setInterval(()=>{
   i=(i+1)%slides.length;
   document.getElementById("slide").src=slides[i];
 },3000);
+
+/* STATS */
+const stats=document.querySelectorAll(".stat");
+stats.forEach(stat=>{
+  const target=+stat.dataset.target;
+  let count=0;
+  const inc=target/100;
+  const update=()=>{
+    if(count<target){
+      count+=inc;
+      stat.firstChild.textContent=Math.ceil(count);
+      setTimeout(update,30);
+    }
+  };
+  update();
+});
+
+/* FAQ */
+document.querySelectorAll(".faq-question").forEach(q=>{
+  q.onclick=()=>q.nextElementSibling.style.display=
+  q.nextElementSibling.style.display==="block"?"none":"block";
+});
+
+/* BACK TO TOP */
+window.onscroll=()=>{
+  document.querySelector(".top-btn").style.display=
+    window.scrollY>400?"block":"none";
+};
 </script>
 
 </body>
