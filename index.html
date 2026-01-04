@@ -17,10 +17,18 @@ body{
 /* Header */
 header{
   background:#16325c;
-  padding:20px;
+  padding:15px 20px;
   display:flex;
   justify-content:space-between;
   align-items:center;
+}
+.header-left{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+.logo{
+  height:45px;
 }
 nav a{
   color:white;
@@ -47,6 +55,25 @@ nav a{
 section{text-align:center;padding:50px 20px;}
 section h2{margin-bottom:15px;}
 
+/* Services Images */
+.services-grid{
+  display:flex;
+  gap:20px;
+  justify-content:center;
+  flex-wrap:wrap;
+}
+.service-box{
+  background:#ffffff;
+  color:#1e3c72;
+  padding:20px;
+  border-radius:10px;
+  width:220px;
+}
+.service-box img{
+  width:100%;
+  border-radius:10px;
+}
+
 /* Form */
 form{max-width:400px;margin:auto;}
 input,textarea,button{
@@ -70,6 +97,18 @@ footer{
   text-align:center;
 }
 
+/* Social Icons */
+.socials{
+  margin-top:10px;
+}
+.socials a{
+  margin:0 10px;
+  display:inline-block;
+}
+.socials img{
+  height:28px;
+}
+
 /* WhatsApp */
 .whatsapp{
   position:fixed;
@@ -89,7 +128,10 @@ footer{
 <body>
 
 <header>
-  <h2>Sai Kumar</h2>
+  <div class="header-left">
+    <img src="logo.png" alt="Sai Kumar Logo" class="logo">
+    <h2>Sai Kumar</h2>
+  </div>
   <nav>
     <a href="#services">Services</a>
     <a href="#contact">Contact</a>
@@ -106,7 +148,21 @@ footer{
 
 <section id="services">
   <h2>Our Services</h2>
-  <p>Business Consulting • Digital Marketing • Website Development</p>
+
+  <div class="services-grid">
+    <div class="service-box">
+      <img src="https://via.placeholder.com/300x180" alt="Consulting">
+      <h3>Business Consulting</h3>
+    </div>
+    <div class="service-box">
+      <img src="https://via.placeholder.com/300x180" alt="Marketing">
+      <h3>Digital Marketing</h3>
+    </div>
+    <div class="service-box">
+      <img src="https://via.placeholder.com/300x180" alt="Web">
+      <h3>Website Development</h3>
+    </div>
+  </div>
 </section>
 
 <section id="contact">
@@ -139,25 +195,32 @@ footer{
 
 <footer>
   <p>© 2026 Sai Kumar. All Rights Reserved.</p>
+
+  <div class="socials">
+    <a href="https://instagram.com/" target="_blank">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
+    </a>
+    <a href="https://facebook.com/" target="_blank">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Facebook_icon.svg" alt="Facebook">
+    </a>
+  </div>
 </footer>
 
-<!-- WhatsApp Button -->
+<!-- WhatsApp -->
 <a class="whatsapp" href="https://wa.me/919110321753" target="_blank">
   <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
 </a>
 
-<!-- Form Script -->
 <script>
 document.getElementById("contactForm").addEventListener("submit", function(e){
   e.preventDefault();
-
-  fetch(this.action, {
-    method: "POST",
-    body: new FormData(this),
-    headers: { "Accept": "application/json" }
-  }).then(() => {
-    window.location.href = "thankyou.html";
-  }).catch(() => {
+  fetch(this.action,{
+    method:"POST",
+    body:new FormData(this),
+    headers:{Accept:"application/json"}
+  }).then(()=>{
+    window.location.href="thankyou.html";
+  }).catch(()=>{
     alert("Error submitting form");
   });
 });
