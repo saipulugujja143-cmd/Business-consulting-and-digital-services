@@ -2,12 +2,28 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Sai Kumar | Business Consulting & Digital Services</title>
+
+<title>Sai Kumar | Business Consulting, Cargo & Digital Services</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Business Consulting, Cargo, Logistics & Digital Services by Sai Kumar">
-<meta name="keywords" content="Business Consulting, Cargo Services, Logistics, Digital Marketing">
+<meta name="description" content="Sai Kumar provides Business Consulting, Cargo & Logistics, Digital Marketing and Web Services in India.">
+<meta name="keywords" content="Business Consulting, Cargo Services, Logistics, Digital Marketing, Website Development">
 <meta name="author" content="Sai Kumar">
+<meta name="robots" content="index, follow">
+
+<!-- SEO Open Graph -->
+<meta property="og:title" content="Sai Kumar | Business Consulting & Digital Services">
+<meta property="og:description" content="Professional business consulting, cargo & logistics solutions.">
+<meta property="og:type" content="website">
+
+<!-- GOOGLE ANALYTICS (ADD YOUR ID) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-XXXXXXX');
+</script>
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
@@ -25,30 +41,21 @@ header{
   top:0;
   z-index:1000;
 }
-.header-left{display:flex;align-items:center;gap:10px}
-.logo{height:42px}
+.header-left{display:flex;gap:10px;align-items:center}
+.logo{height:40px}
 nav{display:flex;gap:15px}
 nav a{color:white;text-decoration:none;font-weight:bold}
 .menu-btn{display:none;font-size:26px;cursor:pointer}
 
 /* SLIDER */
-.slider img{
-  width:100%;
-  height:420px;
-  object-fit:cover;
-}
+.slider img{width:100%;height:420px;object-fit:cover}
 
 /* SECTION */
 section{padding:70px 20px;text-align:center}
-h2{margin-bottom:25px}
+h2{margin-bottom:20px}
 
 /* GRID */
-.grid{
-  display:flex;
-  gap:25px;
-  justify-content:center;
-  flex-wrap:wrap;
-}
+.grid{display:flex;gap:25px;flex-wrap:wrap;justify-content:center}
 .card{
   background:white;
   color:#1e3c72;
@@ -56,102 +63,58 @@ h2{margin-bottom:25px}
   padding:20px;
   border-radius:12px;
 }
-.card img{
-  width:100%;
-  height:160px;
-  object-fit:cover;
-  border-radius:10px;
-}
+.card img{width:100%;height:160px;object-fit:cover;border-radius:10px}
 
 /* STATS */
-.stats{
-  background:#16325c;
-}
-.stat{
-  font-size:32px;
-  font-weight:bold;
-}
-.stat p{font-size:16px}
+.stats{background:#16325c}
+.stat{font-size:32px;font-weight:bold}
 
 /* FAQ */
-.faq{
-  max-width:700px;
-  margin:auto;
-  text-align:left;
-}
-.faq-item{
-  background:white;
-  color:#1e3c72;
-  margin-bottom:10px;
-  border-radius:8px;
-}
-.faq-question{
-  padding:15px;
-  cursor:pointer;
-  font-weight:bold;
-}
-.faq-answer{
-  padding:15px;
-  display:none;
-}
+.faq{max-width:700px;margin:auto;text-align:left}
+.faq-item{background:white;color:#1e3c72;margin-bottom:10px;border-radius:8px}
+.faq-question{padding:15px;font-weight:bold;cursor:pointer}
+.faq-answer{padding:15px;display:none}
 
-/* FORM */
+/* FORMS */
 form{max-width:420px;margin:auto}
 input,textarea,button{
-  width:100%;
-  padding:10px;
-  margin:8px 0;
-  border-radius:6px;
-  border:none;
+  width:100%;padding:10px;margin:8px 0;border-radius:6px;border:none
 }
 button{background:white;font-weight:bold;cursor:pointer}
 
-/* FOOTER */
-footer{
-  background:#16325c;
-  padding:30px;
-  text-align:center;
-}
-.socials{
-  display:flex;
-  justify-content:center;
-  gap:18px;
-  margin-top:15px;
-}
-.socials img{
-  height:28px;
-  background:white;
-  padding:4px;
-  border-radius:6px;
+/* ADMIN */
+.admin{
+  background:#ffffff;
+  color:#1e3c72;
+  padding:20px;
+  border-radius:10px;
+  max-width:400px;
+  margin:auto;
+  display:none;
 }
 
-/* FLOATING BUTTONS */
+/* FOOTER */
+footer{background:#16325c;padding:30px}
+.socials{display:flex;justify-content:center;gap:18px;margin-top:15px}
+.socials img{height:26px;background:white;padding:4px;border-radius:5px}
+
+/* FLOATING */
 .whatsapp,.call,.top-btn{
-  position:fixed;
-  right:20px;
-  padding:12px;
-  border-radius:50%;
+  position:fixed;right:20px;padding:12px;border-radius:50%
 }
 .whatsapp{bottom:20px;background:#25D366}
 .call{bottom:80px;background:#0a66c2}
-.top-btn{
-  bottom:140px;
-  background:white;
-  color:#1e3c72;
-  display:none;
-}
+.top-btn{bottom:140px;background:white;color:#1e3c72;display:none}
 
 /* MOBILE */
 @media(max-width:768px){
   nav{
     display:none;
     flex-direction:column;
-    background:#16325c;
     position:absolute;
-    top:60px;
-    right:20px;
-    padding:15px;
-    border-radius:10px;
+    background:#16325c;
+    top:60px;right:20px;
+    padding:15px;border-radius:10px
   }
   nav.show{display:flex}
   .menu-btn{display:block}
@@ -169,8 +132,8 @@ footer{
   <div class="menu-btn" onclick="toggleMenu()">☰</div>
   <nav id="menu">
     <a href="#services">Services</a>
-    <a href="#portfolio">Portfolio</a>
-    <a href="#faq">FAQ</a>
+    <a href="#payment">Payment</a>
+    <a href="#admin">Admin</a>
     <a href="#contact">Contact</a>
   </nav>
 </header>
@@ -199,35 +162,42 @@ footer{
 </div>
 </section>
 
-<!-- STATS -->
-<section class="stats">
-<div class="grid">
-  <div class="stat" data-target="100">0<p>Clients</p></div>
-  <div class="stat" data-target="50">0<p>Projects</p></div>
-  <div class="stat" data-target="5">0<p>Years Experience</p></div>
-</div>
+<!-- PAYMENT -->
+<section id="payment">
+<h2>Make a Payment</h2>
+<p>Secure online payment powered by Razorpay (backend required)</p>
+<button onclick="alert('Connect Razorpay backend to activate payments')">
+Pay Now
+</button>
 </section>
 
-<!-- PORTFOLIO -->
-<section id="portfolio">
-<h2>Portfolio</h2>
-<div class="grid">
-  <div class="card">Logistics Website – 60% Growth</div>
-  <div class="card">Consulting Optimization</div>
+<!-- ADMIN LOGIN -->
+<section id="admin">
+<h2>Admin Login</h2>
+<form onsubmit="adminLogin(event)">
+  <input type="password" id="adminPass" placeholder="Admin Password">
+  <button>Login</button>
+</form>
+
+<div class="admin" id="adminPanel">
+  <h3>Admin Dashboard</h3>
+  <p>✔ View messages</p>
+  <p>✔ Manage services</p>
+  <p>✔ Analytics access</p>
 </div>
 </section>
 
 <!-- FAQ -->
-<section id="faq">
-<h2>Frequently Asked Questions</h2>
+<section>
+<h2>FAQ</h2>
 <div class="faq">
   <div class="faq-item">
-    <div class="faq-question">Do you provide cargo consulting?</div>
-    <div class="faq-answer">Yes, end-to-end cargo & logistics consulting.</div>
+    <div class="faq-question">Is payment secure?</div>
+    <div class="faq-answer">Yes, Razorpay / Stripe integration is supported.</div>
   </div>
   <div class="faq-item">
-    <div class="faq-question">How long does a project take?</div>
-    <div class="faq-answer">Typically 2–6 weeks depending on scope.</div>
+    <div class="faq-question">Do you offer cargo consulting?</div>
+    <div class="faq-answer">Yes, complete logistics solutions.</div>
   </div>
 </div>
 </section>
@@ -235,53 +205,37 @@ footer{
 <!-- CONTACT -->
 <section id="contact">
 <h2>Contact Us</h2>
-<form>
-  <input type="email" placeholder="Your Email" required>
-  <button>Subscribe</button>
-</form>
-
-<br>
-
 <form action="https://formspree.io/f/xlgdolnp" method="POST">
-  <input type="text" name="name" placeholder="Name" required>
-  <input type="email" name="email" placeholder="Email" required>
-  <textarea name="message" placeholder="Message" required></textarea>
+  <input name="name" placeholder="Name" required>
+  <input name="email" type="email" placeholder="Email" required>
+  <textarea name="message" placeholder="Message"></textarea>
   <button type="submit">Send</button>
 </form>
-</section>
-
-<!-- MAP -->
-<section>
-<h2>Our Location</h2>
-<iframe src="https://www.google.com/maps?q=India&output=embed"
- width="100%" height="300" style="border:0"></iframe>
 </section>
 
 <footer>
 <p>© 2026 Sai Kumar</p>
 <div class="socials">
-  <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Facebook_icon.svg"></a>
-  <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"></a>
-  <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg"></a>
-  <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg"></a>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Facebook_icon.svg">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg">
 </div>
 </footer>
 
-<!-- FLOATING BUTTONS -->
+<!-- FLOATING -->
 <a class="whatsapp" href="https://wa.me/919110321753" target="_blank">
 <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" height="28">
 </a>
-
 <a class="call" href="tel:+919110321753">
 <img src="https://upload.wikimedia.org/wikipedia/commons/8/8c/Phone_font_awesome.svg" height="28">
 </a>
-
-<button class="top-btn" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+<button class="top-btn" onclick="scrollTo({top:0,behavior:'smooth'})">↑</button>
 
 <script>
 /* MENU */
 function toggleMenu(){
-  document.getElementById("menu").classList.toggle("show");
+ document.getElementById("menu").classList.toggle("show");
 }
 
 /* SLIDER */
@@ -293,36 +247,30 @@ const slides=[
 let i=0;
 document.getElementById("slide").src=slides[0];
 setInterval(()=>{
-  i=(i+1)%slides.length;
-  document.getElementById("slide").src=slides[i];
+ i=(i+1)%slides.length;
+ document.getElementById("slide").src=slides[i];
 },3000);
-
-/* STATS */
-const stats=document.querySelectorAll(".stat");
-stats.forEach(stat=>{
-  const target=+stat.dataset.target;
-  let count=0;
-  const inc=target/100;
-  const update=()=>{
-    if(count<target){
-      count+=inc;
-      stat.firstChild.textContent=Math.ceil(count);
-      setTimeout(update,30);
-    }
-  };
-  update();
-});
 
 /* FAQ */
 document.querySelectorAll(".faq-question").forEach(q=>{
-  q.onclick=()=>q.nextElementSibling.style.display=
-  q.nextElementSibling.style.display==="block"?"none":"block";
+ q.onclick=()=>q.nextElementSibling.style.display=
+ q.nextElementSibling.style.display==="block"?"none":"block";
 });
+
+/* ADMIN */
+function adminLogin(e){
+ e.preventDefault();
+ if(document.getElementById("adminPass").value==="admin123"){
+   document.getElementById("adminPanel").style.display="block";
+ }else{
+   alert("Wrong password");
+ }
+}
 
 /* BACK TO TOP */
 window.onscroll=()=>{
-  document.querySelector(".top-btn").style.display=
-    window.scrollY>400?"block":"none";
+ document.querySelector(".top-btn").style.display=
+ window.scrollY>400?"block":"none";
 };
 </script>
 
