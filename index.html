@@ -123,6 +123,24 @@ footer{
   height:28px;
 }
 </style>
+  .socials{
+  margin-top:15px;
+  display:flex;
+  justify-content:center;
+  gap:18px;
+}
+
+.socials img{
+  height:26px;
+  filter: invert(1); /* makes icons white */
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.socials a:hover img{
+  transform: scale(1.15);
+  opacity:0.8;
+}
+
 </head>
 
 <body>
@@ -195,6 +213,28 @@ footer{
 
 <footer>
   <p>© 2026 Sai Kumar. All Rights Reserved.</p>
+  <footer>
+  <p>© 2026 Sai Kumar. All Rights Reserved.</p>
+
+  <div class="socials">
+    <a href="https://facebook.com/" target="_blank" aria-label="Facebook">
+      <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/facebook.svg" alt="Facebook">
+    </a>
+
+    <a href="https://instagram.com/" target="_blank" aria-label="Instagram">
+      <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/instagram.svg" alt="Instagram">
+    </a>
+
+    <a href="https://youtube.com/" target="_blank" aria-label="YouTube">
+      <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/youtube.svg" alt="YouTube">
+    </a>
+
+    <a href="https://t.me/" target="_blank" aria-label="Telegram">
+      <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/telegram.svg" alt="Telegram">
+    </a>
+  </div>
+</footer>
+
 
   <div class="socials">
     <a href="https://instagram.com/" target="_blank">
@@ -228,3 +268,4 @@ document.getElementById("contactForm").addEventListener("submit", function(e){
 
 </body>
 </html>
+
