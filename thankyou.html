@@ -13,73 +13,24 @@ body{
   justify-content:center;
   align-items:center;
   background:#f4f4f4;
-  font-family:Arial, sans-serif;
-}
-
-.box{
-  background:#f8f9fb;
-  padding:40px 60px;
-  border-radius:10px;
-  box-shadow:0 10px 25px rgba(0,0,0,0.1);
-  max-width:500px;
-  width:90%;
-}
-
-.box h1{
-  margin-top:0;
-  font-size:36px;
-<!DOCTYPE html>
-<html>
-<head>
-<title>Thank You</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-body{
-  margin:0;
-  height:100vh;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  background:#f4f4f4;
   font-family:Arial;
 }
 .box{
-  background:#f8f9fb;
+  background:#fff;
   padding:40px 60px;
   border-radius:10px;
   box-shadow:0 10px 30px rgba(0,0,0,.15);
+  text-align:left;
 }
-h1{margin-top:0;}
 a{color:red;font-weight:bold;text-decoration:none;}
 </style>
 </head>
+
 <body>
   <div class="box">
     <h1>Thanks!</h1>
     <p>The form was submitted successfully.</p>
     <a href="index.html">Go back</a>
   </div>
-</body> 
-<script>
-document.getElementById("contactForm").addEventListener("submit", function(e){
-  e.preventDefault();
-
-  fetch(this.action, {
-    method: "POST",
-    body: new FormData(this),
-    headers: { "Accept": "application/json" }
-  })
-  .then(response => {
-    if (response.ok) {
-      window.location.href = "thankyou.html";
-    } else {
-      alert("Error sending message.");
-    }
-  })
-  .catch(() => alert("Network error."));
-});
-</script>
-
+</body>
 </html>
-
-
